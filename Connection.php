@@ -184,7 +184,13 @@ class Connection extends Component
             // Make sure that nodes have an 'http_address' property, which is not the case
             // if you're using AWS Elasticsearch service (at least as of Oct., 2015, still the case in July, 2017).
             // it should be there according to the docs: https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-nodes-info.html
-            if (!isset($node['http_address'])) {
+            if($node['version'] >= 5){
+                if(!isset($node['http']['publish_address'])){
+                    unset($nodes[$key]);
+                }else{
+                    $node['http_address'] = $node['http']['publish_address'];
+                }
+            }elseif(!isset($node['http_address'])) {
                 unset($nodes[$key]);
             }
 
