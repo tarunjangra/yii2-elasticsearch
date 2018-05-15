@@ -1,5 +1,5 @@
 {
-    "name": "tarunjangra/yii2-elasticsearch",
+    "name": "tarunjangra/yii2.0.14-elasticsearch",
     "description": "Elasticsearch integration and ActiveRecord for the Yii framework",
     "keywords": ["yii2", "elasticsearch", "active-record", "search", "fulltext"],
     "type": "yii2-extension",
