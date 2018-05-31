@@ -185,7 +185,11 @@ class Connection extends Component
             // Elasticsearch service (at least as of Oct., 2015). - TO BE VERIFIED
             // Temporary workaround - simply ignore all invalid nodes
             if (!isset($node['http']['publish_address'])) {
+              if(preg_match("/amazonaws/",$host)){
+                $node['http']['publish_address'] = $host;
+              }else{
                 unset($nodes[$key]);
+              }
             }
             $node['http_address'] = $node['http']['publish_address'];
 
