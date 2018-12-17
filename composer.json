@@ -1,5 +1,5 @@
 {
-    "name": "tarunjangra/yii2.0.14-elasticsearch",
+    "name": "yiisoft/yii2-elasticsearch",
     "description": "Elasticsearch integration and ActiveRecord for the Yii framework",
     "keywords": ["yii2", "elasticsearch", "active-record", "search", "fulltext"],
     "type": "yii2-extension",
@@ -17,7 +17,7 @@
             "email": "mail@cebe.cc"
         },
         {
-            "name": "Tarun jangra",
+            "name": "Tarun Jangra",
             "email": "tarun.jangra@hotmail.com"
         }
     ],
